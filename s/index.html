@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life of Mars</title>
+    <link rel="stylesheet" href="c.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--all maket-->
+<div class="all-maket">
+    <!--header container-->
+    <div>
+        <header class="header-container">
+            <img class="photo" src="./img/y91_LVCmlv4.jpg" alt="photo-mars">
+            <h1>Кот Марс</h1>
+            <h2>Острожно, повышеный уровень мимишности</h2>
+        </header>
+    </div>
+    <!--content-->
+    <div class="flex content">
+        <!-- left container -->
+        <div class="left-container">
+            <aside>
+                <!-- Tech Skills container-->
+                <div class="tech-skills">
+                    <h3>Tech Skills</h3>
+                    <ul>
+                        <li>Профессиональный ты-гы-дык</li>
+                        <li>Мяукает громче всех</li>
+                        <li>Лежуньканье. Уровень ЦАРЬ</li>
+                        <li>Не перебирает харчами</li>
+                    </ul>
+                </div>
+                <!-- Soft Skills container-->
+                <div class="soft-skills">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Ленивый</li>
+                        <li>Толстенкий</li>
+                        <li>Нагленький</li>
+                        <li>Обоятельный</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <!--right conteiner-->
+        <div class="right-conteiner">
+            <!--main info-->
+            <div class="main-info">
+                </p><h2>История одной рыжей мордахи</h2></p>
+                <p>Марсик - большой рыжий комок.
+                    <br>Всегда максимально серьезный кот.
+                    <br>Не признает обнимашки, няшки и тисканья.
+                    <br>Но за вкусняшку готов переступить через свои котьи принципы.</p>
+            </div>
+            <!--history of Mars-->
+            <div>
+                <h3>Котиные истории</h3>
+                <p><span>
+                Марс появился на свет в 2016 году. Предположительно летом. Но приобрел новую семью 17 октября.
+            Эту дату и принято считать днем рождения Марсика.
+            Назвали его так в честь красной планеты Марс. Детство у него было веселое и счастливое.
+            Его хозяйка всегда очень любила и баловала.
+            Но Марс рос своенравным котёнком.
+            Маленький Марсель любил делать запрещенные вещи. Шумел по ночам, просыпался в 4 утра и нагло требовал еды.
+            Царапал обои на съемной квартире, делал лужи под шторой и прочие кошачьи шалости.
+            Со временем он отучился от этого, особенно после нескольких преподнесенных ему уроков.
+            Марс быстро вырос. Стал солидным котом с жирочком на пузике. Но для его хозяйки он всё тот же мелкий пушистик.
+        </span></p>
+            </div>
+            <!--facts of cat-->
+            <div>
+                <h3>Интересные факты</h3>
+                <ol>
+                    <li>Перенес 8-часовую поездку в автобусе</li>
+                    <li>Полноценный кот</li>
+                    <li>Не любит кошачьи нежности</li>
+                    <li>Может цапнуть не задумываясь</li>
+                </ol>
+            </div>
+            <!--special signs-->
+            <div>
+                <h3>Особые приметы</h3>
+                <ol>
+                    <li>Рыжий</li>
+                    <li>Вес 4,7 кг</li>
+                    <li>Рост от макушки до кончика хвоста 70 см</li>
+                    <li>В тумбочке прячет модераторские очки</li>
+                </ol>
+                <span>Уровень наглости</span>
+                <br>
+                <progress id="tags" max="100" value="85">85%</progress>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!--contacts-->
+        <div>
+            <a href="https://reverent-kare-e7c798.netlify.app/">My portfolio</a>
+            <a href="mailto:vredinka093@gmail.com">vredinka093@gmail.com</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function evaluateTicTacToePosition(position) {
+        let winSign;
+      /*  for (let i = 0; i < position[0].length; i += 1) {
+            if (position[0][i] && position[0][i] === position[1][i] && position[1][i] === position[2][i]) {
+                winSign = position[0][i];
+                break;
+            }
+        }
+        for (let i = 0; i < position.length; i += 1) {
+            if (position[i][0] && position[i][0] === position[i][1] && position[i][1] === position[i][2]) {
+                winSign = position[i][0];
+                break;
+            }
+        }*/
+        if (position[1][1]
+            && ((position[0][0] === position[1][1] && position[1][1] === position[2][2])
+                || (position[0][2] === position[1][1] && position[1][1] === position[2][0]))) {
+            const a = position[1];
+            ([winSign] = [...a]);
+            console.log(a);
+        }
+        let b;
+        const a = position[1];
+        ([b,winSign] = [...a]);
+        console.log(a);
+        return winSign;
+    }
+
+   console.log(evaluateTicTacToePosition( [[6,6,6],[4,5,7],[4,5,1]]));
+
+
+</script>
+
+
+</body>
+</html>
